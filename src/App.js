@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navbar, Sidebar, Footer } from "./components";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomeScreen from "./screen/HomeScreen";
+import AboutScreen from "./screen/AboutScreen";
+import ContactScreen from "./screen/ContactScreen";
+import SingleCocktailScreen from "./screen/SingleCocktailScreen";
+import ErrorScreen from "./screen/ErrorScreen";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return(
+    <Router className='App'>
+      <Navbar />
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
+        <Route path="/contattaci" element={<ContactScreen />} />
+        <Route path="/cocktail/:id" element={<SingleCocktailScreen />} />
+        <Route path="*" element={<ErrorScreen />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
