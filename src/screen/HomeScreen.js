@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Hero, Cocktails, Loading, ErrorMessage } from "../components";
 import { FaSearch } from "react-icons/fa";
-import Lottie from "react-lottie";
-import animationData from "../assets/animation/drink-animation.json";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import useTitle from "../useTitle";
@@ -32,20 +30,6 @@ const HomeScreen = () => {
           <Link to='/about' className="btn btn-primary" >
             Scopri di più
           </Link>
-        </div>
-        <div className="home-hero-img">
-          <Lottie 
-            options={{
-              loop:true,
-              autoplay:true,
-              reverse: true,
-              animationData,
-              rendererSettings:{
-                preserveAspectRatio: 'xMidYMid slice'
-              }
-            }}
-            height={300}
-          />
         </div>
       </div>
     </Hero>
