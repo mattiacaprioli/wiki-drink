@@ -31,7 +31,7 @@ const Cocktail = ({strDrinkThumb: img, idDrink: _id, strDrink: name}) => {
 
     <div className={show ? 'card-text container show-info' : 'card-text container'}>
       <h5>{name}</h5>
-      <div className="see-more-btn brand-color">
+      <div className="see-more-btn brand-color" onClick={() => goToCocktail(_id)}>
         <h5>Ricetta</h5>
         <HiClipboardList className="icon" />
       </div>

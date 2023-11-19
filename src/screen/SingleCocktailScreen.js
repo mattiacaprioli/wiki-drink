@@ -102,6 +102,7 @@ const SingleCocktailScreen = () => {
             <h4>Ingredienti:</h4>
             <ul className="instruction-list">
               {
+                // eslint-disable-next-line array-callback-return
                 strInstructionsList.map((el, index) => {
                   if(el.istruzione){
                     return <li key={index}>

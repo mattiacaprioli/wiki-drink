@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Hero, Cocktails, Loading, ErrorMessage } from "../components";
 import { FaSearch } from "react-icons/fa";
 import Lottie from "react-lottie";
